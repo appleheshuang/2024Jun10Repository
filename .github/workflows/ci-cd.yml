@@ -27,15 +27,13 @@ jobs:
       run: dotnet build --no-restore
 
   jobs:
-    test:
+      runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
     - name: Test
       run: dotnet test --no-build --verbosity normal
+  
 
-    # - name: Publish
-    #   run: dotnet publish --no-build -c Release -o ./publish
-
-    # - name: Deploy
-    #   uses: actions/upload-artifact@v2
-    #   with:
-    #     name: myapp
-    #     path: ./publish/
+    
