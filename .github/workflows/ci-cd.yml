@@ -9,7 +9,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -26,8 +25,8 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
 
-  jobs:
-      runs-on: ubuntu-latest
+  Test:
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
