@@ -30,11 +30,11 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
 
-    - name: Publish
-      run: dotnet publish --no-build -c Release -o ./publish
+    # - name: Publish
+    #   run: dotnet publish --no-build -c Release -o ./publish
 
-    - name: Deploy
-      uses: actions/upload-artifact@v2
-      with:
-        name: myapp
-        path: ./publish/
+    # - name: Deploy
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: myapp
+    #     path: ./publish/
