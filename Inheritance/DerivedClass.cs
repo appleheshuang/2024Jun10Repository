@@ -7,7 +7,7 @@ public class SquareBoxForCat:SquareBox
     {
         Console.WriteLine("Cat Food");
     }
-
+[Fact]
     public void CatEat()
     {
         Console.WriteLine("Cat Eat");
