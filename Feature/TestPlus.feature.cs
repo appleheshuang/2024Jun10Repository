@@ -75,11 +75,11 @@ namespace CSharpLearning.Feature
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Test Plus1")]
-        [NUnit.Framework.CategoryAttribute("Smoketests")]
+        [NUnit.Framework.CategoryAttribute("fast")]
         public async System.Threading.Tasks.Task TestPlus1()
         {
             string[] tagsOfScenario = new string[] {
-                    "Smoketests"};
+                    "fast"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Plus1", "Test Plus Two Numbers", tagsOfScenario, argumentsOfScenario, featureTags);
 #line 4
@@ -98,11 +98,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Test Plus2")]
-        [NUnit.Framework.CategoryAttribute("Smoketests")]
+        [NUnit.Framework.CategoryAttribute("slow")]
         public async System.Threading.Tasks.Task TestPlus2()
         {
             string[] tagsOfScenario = new string[] {
-                    "Smoketests"};
+                    "slow"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Plus2", "Test Plus Two Numbers", tagsOfScenario, argumentsOfScenario, featureTags);
 #line 8

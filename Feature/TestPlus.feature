@@ -1,9 +1,9 @@
 Feature: TestSpecflow
 
-@Smoketests
+@fast
 Scenario: Test Plus1
 Test Plus Two Numbers
 
-@Smoketests
+@slow
 Scenario: Test Plus2
 Test Plus Two Numbers
