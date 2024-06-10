@@ -25,7 +25,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
 
-  Test:
+  SmokeTest:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,4 +35,11 @@ jobs:
       run: dotnet test --verbosity normal
   
 
-    
+  CORE:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Test
+      run: dotnet test --filter TestCategory=SmokeTest --logger:"nunit;LogFilePath=TestResults/SmokeTest.xml"

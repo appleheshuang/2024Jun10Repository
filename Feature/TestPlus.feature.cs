@@ -74,15 +74,38 @@ namespace CSharpLearning.Feature
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Test Plus")]
+        [NUnit.Framework.DescriptionAttribute("Test Plus1")]
         [NUnit.Framework.CategoryAttribute("Smoketests")]
-        public async System.Threading.Tasks.Task TestPlus()
+        public async System.Threading.Tasks.Task TestPlus1()
         {
             string[] tagsOfScenario = new string[] {
                     "Smoketests"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Plus", "Test Plus Two Numbers", tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Plus1", "Test Plus Two Numbers", tagsOfScenario, argumentsOfScenario, featureTags);
 #line 4
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Test Plus2")]
+        [NUnit.Framework.CategoryAttribute("Smoketests")]
+        public async System.Threading.Tasks.Task TestPlus2()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Smoketests"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Plus2", "Test Plus Two Numbers", tagsOfScenario, argumentsOfScenario, featureTags);
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
