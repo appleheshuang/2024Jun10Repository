@@ -33,3 +33,12 @@ jobs:
 
     - name: Test
       run: dotnet test --filter TestCategory=SmokeTest --logger:"html;LogFileName=SmokeTest_$(date +%Y%m%d%H%M%S).html"
+
+  CORETest:
+        runs-on: ubuntu-latest
+    
+        steps:
+        - uses: actions/checkout@v2
+    
+        - name: Test
+          run: dotnet test --filter TestCategory=CORE --logger:"html;LogFileName=CORE_$(date +%Y%m%d%H%M%S).html"   
