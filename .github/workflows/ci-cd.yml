@@ -32,7 +32,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Test
-      run: dotnet test --verbosity normal
+     run: dotnet test --filter TestCategory=SmokeTest --logger:"html;LogFileName=SmokeTest_$(date +%Y%m%d%H%M%S).html"
   
 
   CORE:
@@ -42,4 +42,4 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Test
-      run: dotnet test --filter TestCategory=SmokeTest --logger:"nunit;LogFilePath=TestResults/SmokeTest.xml"
+      run: dotnet test --filter TestCategory=Core --logger:"html;LogFileName=CoreTest_$(date +%Y%m%d%H%M%S).html"
