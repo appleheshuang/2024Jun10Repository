@@ -25,7 +25,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
 
-  SmokeTest:
+  Test:
     runs-on: ubuntu-latest
 
     steps:
@@ -33,13 +33,3 @@ jobs:
 
     - name: Test
      run: dotnet test --filter TestCategory=SmokeTest --logger:"html;LogFileName=SmokeTest_$(date +%Y%m%d%H%M%S).html"
-  
-
-  CORE:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-
-    - name: Test
-      run: dotnet test --filter TestCategory=Core --logger:"html;LogFileName=CoreTest_$(date +%Y%m%d%H%M%S).html"
