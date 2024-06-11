@@ -32,15 +32,15 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Test
-      run: |
-      makedir -p TestResults 
+    run: |
+      mkdir -p TestResults
       dotnet test --filter TestCategory=SmokeTest --logger:"html;LogFileName=SmokeTest_$(date +%Y%m%d%H%M%S).html" --results-directory TestResults
 
-    - name: Upload artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: Smoke-Test-Results
-        path: TestResults/
+  - name: Upload artifact
+    uses: actions/upload-artifact@v3
+    with:
+      name: smoke-test-results
+      path: TestResults/
 
   CoreTest:
     runs-on: ubuntu-latest
