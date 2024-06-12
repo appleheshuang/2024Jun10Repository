@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace CSharpLearning.Features
+namespace CSharpLearning.Feature
 {
     using TechTalk.SpecFlow;
     using System;
@@ -35,7 +35,7 @@ namespace CSharpLearning.Features
         public virtual async System.Threading.Tasks.Task FeatureSetupAsync()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunnerForAssembly(null, NUnit.Framework.TestContext.CurrentContext.WorkerId);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "TestSpecflow", null, ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Feature", "TestSpecflow", null, ProgrammingLanguage.CSharp, featureTags);
             await testRunner.OnFeatureStartAsync(featureInfo);
         }
         
@@ -75,11 +75,11 @@ namespace CSharpLearning.Features
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Test Plus1")]
-        [NUnit.Framework.CategoryAttribute("SmokeTest")]
+        [NUnit.Framework.CategoryAttribute("fast")]
         public async System.Threading.Tasks.Task TestPlus1()
         {
             string[] tagsOfScenario = new string[] {
-                    "SmokeTest"};
+                    "fast"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Plus1", "Test Plus Two Numbers", tagsOfScenario, argumentsOfScenario, featureTags);
 #line 4
@@ -98,11 +98,11 @@ this.ScenarioInitialize(scenarioInfo);
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Test Plus2")]
-        [NUnit.Framework.CategoryAttribute("Core")]
+        [NUnit.Framework.CategoryAttribute("slow")]
         public async System.Threading.Tasks.Task TestPlus2()
         {
             string[] tagsOfScenario = new string[] {
-                    "Core"};
+                    "slow"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Plus2", "Test Plus Two Numbers", tagsOfScenario, argumentsOfScenario, featureTags);
 #line 8
@@ -115,32 +115,6 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 await this.ScenarioStartAsync();
-            }
-            await this.ScenarioCleanupAsync();
-        }
-        
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Appium First Test")]
-        [NUnit.Framework.CategoryAttribute("SmokeTest")]
-        public async System.Threading.Tasks.Task AppiumFirstTest()
-        {
-            string[] tagsOfScenario = new string[] {
-                    "SmokeTest"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Appium First Test", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 12
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                await this.ScenarioStartAsync();
-#line 13
-await testRunner.GivenAsync("Appium0529 First Test", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
             }
             await this.ScenarioCleanupAsync();
         }
