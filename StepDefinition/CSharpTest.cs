@@ -5,7 +5,7 @@ using System;
 [Binding]
 public class Plus
 {
-     [Given("Test Plus Two Numbers")]
+[Given("Test Plus Two Numbers")]
 
 public void PlusTwoNumber()
 {
