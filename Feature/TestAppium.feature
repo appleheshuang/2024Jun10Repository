@@ -1,5 +1,5 @@
 Feature: TestAppium
 
-@fast
+@SmokeTest
 Scenario: Test Appium
 Test Plus Two Numbers

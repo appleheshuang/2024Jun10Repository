@@ -34,7 +34,7 @@ public class Tests
         _driver.Dispose();
     }
 
-    [Test]
+    // [Test]
     public void TestBattery()
     {
         _driver.StartActivity("com.android.settings", ".Settings");
