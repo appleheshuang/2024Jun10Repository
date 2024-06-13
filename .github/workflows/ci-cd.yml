@@ -37,7 +37,7 @@ jobs:
       - name: Test
         run: |
           mkdir -p TestResults
-          dotnet test --filter TestCategory=SmokeTest --logger:"html;LogFileName=SmokeTest_$(date +%Y%m%d%H%M%S).html" --results-directory TestResults
+          dotnet test --filter TestCategory=SmokeTest --logger:"trx;LogFileName=SmokeTest_$(date +%Y%m%d%H%M%S).xml" --results-directory TestResults
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
@@ -59,7 +59,7 @@ jobs:
       - name: Test
         run: |
           mkdir -p TestResults
-          dotnet test --filter TestCategory=Core --logger:"html;LogFileName=Core_$(date +%Y%m%d%H%M%S).html" --results-directory TestResults
+          dotnet test --filter TestCategory=Core --logger:"trx;LogFileName=Core_$(date +%Y%m%d%H%M%S).xml" --results-directory TestResults
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
