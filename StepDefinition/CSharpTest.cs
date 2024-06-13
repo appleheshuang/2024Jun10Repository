@@ -13,7 +13,7 @@ public void PlusTwoNumber()
     int a = 10;
     int b = 20;
     int c = a + b;
-    Console.WriteLine("cNew = " + c);
+    Console.WriteLine("Test Plus Two Log Eva Jun13 " + c);
     Assert.Pass();
 }
 }
