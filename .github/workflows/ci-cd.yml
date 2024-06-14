@@ -17,6 +17,12 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
+      - name: Install Livingdoc
+        run: dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI
+
+      - name: Verify Livingdoc Installation
+        run: livingdoc --version
+
       - name: Restore dependencies
         run: dotnet restore
 
