@@ -62,6 +62,9 @@ jobs:
         with:
           dotnet-version: 8.0.x
 
+      - name: Install Livingdoc
+        run: dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI
+
       - name: Test
         run: |
           mkdir -p TestResults
