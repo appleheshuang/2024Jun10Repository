@@ -75,11 +75,9 @@ namespace CSharpLearning.Feature
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Test Selenium")]
-        [NUnit.Framework.CategoryAttribute("SmokeTest")]
         public async System.Threading.Tasks.Task TestSelenium()
         {
-            string[] tagsOfScenario = new string[] {
-                    "SmokeTest"};
+            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test Selenium", "Test Plus Two Numbers", tagsOfScenario, argumentsOfScenario, featureTags);
 #line 4

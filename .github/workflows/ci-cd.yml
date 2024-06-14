@@ -59,8 +59,9 @@ jobs:
       - name: Test
         run: |
           mkdir -p TestResults
-          dotnet test --filter TestCategory=Core --logger:"trx;LogFileName=Core_$(date +%Y%m%d%H%M%S).xml" --results-directory TestResults
-
+          dotnet test --filter TestCategory=Core
+          livingdoc test-assembly bin/Debug/net8.0/CSharpLearning.dll -t bin/debug/net8.0/TestExecution.json --output ./TestResults/TestResultsCore_$(date +%Y%m%d%H%M%S).html
+          
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
